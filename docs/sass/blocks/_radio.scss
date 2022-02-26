@@ -1,0 +1,57 @@
+/* ----- radio ------------- */
+.radio-row {
+  margin-bottom: 20px;
+  display: block;
+  /* чтобы элемент тянулся и был друг под другом */
+}
+
+.real-radio {
+  appearance: none;
+  /* это новое свойство не доступно старым браузерам */
+  width: 0;
+  height: 0;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+
+
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  /*чтоб круг стал в одной строке  */
+  margin-right: 15px;
+  vertical-align: bottom;
+  width: 20px;
+  height: 20px;
+  background: #EEEEEE;
+  border: 1px solid #C0C0C0;
+  border-radius: 50%;
+  /*чтоб квадрат стал кругом  */
+}
+
+.real-radio:focus+.custom-radio {
+  border: 1px solid #2AB698;
+  box-shadow: 0 0 10px rgba(42, 182, 152, 0.5);
+}
+
+.custom-radio::before {
+  content: "";
+  /*  display: block; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 12px;
+  height: 12px;
+  background: #2AB698;
+  border-radius: 50%;
+  /*  display: none; */
+  transition: transform 0.2s ease-in;
+}
+
+.real-radio:checked+.custom-radio::before {
+  transform: translate(-50%, -50%) scale(1);
+  /* display: block; */
+}

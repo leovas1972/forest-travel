@@ -1,0 +1,158 @@
+/* -------- main -------- */
+.main {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 899px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 599px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.main .container {
+  /* Mobile */
+  @media (max-width: 899px) {
+    width: 100%;
+  }
+  
+}
+
+
+.main__row {
+  display: flex;
+  justify-content: space-between;
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    flex-direction: row-reverse;
+  }
+
+  /* Mobile XS*/
+  @media (max-width: 599px) {
+    flex-direction: column-reverse;
+  }
+
+
+}
+
+.main__row+.main__row {
+  margin-top: 120px;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    margin-top: 80px;
+  }
+
+  @media (max-width: 899px) {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 599px) {
+    margin-top: 40px;
+  }
+}
+
+.main__row:nth-child(even) {
+  flex-direction: row-reverse;
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    flex-direction: row-reverse;
+  }
+
+  /* Mobile XS*/
+  @media (max-width: 599px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.main__row-content {
+  width: 470px;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    width: 420px;
+  }
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    width: 100%;
+  }
+}
+
+.main__row-content h2 {
+  margin-bottom: 20px;
+}
+
+
+.main__row-content-wrapper {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #31405B;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  /* mobail */
+  @media (max-width: 899px) {
+    font-size: 16px;
+  }
+
+}
+
+.main__row-content-wrapper p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.main__row-content-wrapper a {
+  color: #138ECE;
+}
+
+.main__row-img {
+  width: 570px;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    width: 420px;
+  }
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    flex-shrink: 0;
+    margin-right: 30px;
+    width: 170px;
+  }
+
+  @media (max-width: 599px) {
+    width: auto;
+    height: 150px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.main__row-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* корректное масштабирование 
+  внутри img */
+
+}

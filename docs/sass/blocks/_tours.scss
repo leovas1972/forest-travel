@@ -1,0 +1,152 @@
+/* -----   tours ---------*/
+
+.main__tours-header {
+  margin-bottom: 60px;
+  text-align: center;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    margin-bottom: 40px;
+  }
+
+  /* Mobile */
+  @media (max-width: 599px) {
+    margin-bottom: 30px;
+  }
+}
+
+.cards__first-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    flex-direction: column;
+  }
+}
+
+.cards__first-row img {
+  @media (max-width: 899px) {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.cards__second-row img {
+  @media (max-width: 899px) {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+  }
+}
+
+.cards__second-row {
+  display: flex;
+  justify-content: space-between;
+
+  /* Mobile */
+  @media (max-width: 899px) {
+    flex-direction: column;
+  }
+}
+
+.card__wrapper-link {
+  /* display: inline-block; */
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card__wrapper-link:hover {
+  opacity: 0.8;
+}
+
+.cards__first-row .card__wrapper-link+.card__wrapper-link {
+
+  @media (max-width: 899px) {
+    margin-top: 30px;
+  }
+
+  @media (max-width: 599px) {
+    margin-top: 20px;
+  }
+}
+
+.cards__second-column .card__wrapper-link+.card__wrapper-link {
+  margin-top: 30px;
+}
+
+.cards__second-column .card__wrapper-link {
+  margin-bottom: 30px;
+
+}
+
+.cards__second-column .card__wrapper-link:last-child {
+  margin-bottom: 0;
+}
+
+.cards__second-column:last-of-type {
+  
+  /* Mobile */
+  @media (max-width: 899px) {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 599px) {
+    margin-top: 20px;
+  }
+
+}
+
+.card__wrapper-title {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 80px;
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  /* Tablet */
+  @media (max-width: 1199px) {
+    /* width: auto; */
+    height: 60px;
+  }
+
+  /* Mobile */
+  @media (max-width: 599px) {
+    height: 50px;
+  }
+}
+
+.card__wrapper-title--hike {
+  background: #A6A6A6;
+}
+
+.card__wrapper-title--camels {
+  background: #C1B19B;
+}
+
+.card__wrapper-title--lake {
+  background: #66B0BE;
+}
+
+.card__wrapper-title--slope {
+  background: #876F56;
+}
+
+.card__wrapper-title--waterfall {
+  background: #27695E;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 28px;
+  color: #FFFFFF;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
